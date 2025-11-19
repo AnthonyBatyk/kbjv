@@ -1,0 +1,2161 @@
+<!doctype html>
+<html lang="uk">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>КБЖВ — Блоки</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>Макронутрієнти та енергетична цінність продуктів:</h1>
+        <p class="lead">Натисніть на іконку для копіювання блоку з можливістю вказати вагу продукту</p>
+
+        <div class="search-container">
+          <div class="search-wrapper">
+            <input type="text" id="search" placeholder="Пошук продукту...">
+            <span id="clear-search">✕</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="grid" id="grid">
+        <article class="food-card" data-text="Яйця" data-kcal="155" data-protein="12" data-fat="10.3" data-carb="0.8">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Яй</div>
+            <div>
+              <div class="name">Яйця</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">155 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">12 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">10.3 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">0.8 г</div>
+            </div>
+          </div>
+          <div class="full-name">Яйця від доброї курки Київська 30 курячі столові С1, універсальне значення для
+            більшості яєць</div>
+        </article>
+
+        <article class="food-card" data-text="Молоко 2.5%" data-kcal="52.7" data-protein="2.82" data-fat="2.5"
+          data-carb="4.73">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Мл</div>
+            <div>
+              <div class="name">Молоко 2.5%</div>
+              <div class="meta">100 мл</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">52.7 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">2.82 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">2.5 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">4.73 г</div>
+            </div>
+          </div>
+          <div class="full-name">Молоко 2.5% Metro Chef</div>
+        </article>
+
+        <article class="food-card" data-text="Заморожена лохина" data-kcal="39" data-protein="1" data-fat="0.5"
+          data-carb="6.6">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Лх</div>
+            <div>
+              <div class="name">Заморожена лохина</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">39 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">1 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">0.5 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">6.6 г</div>
+            </div>
+          </div>
+          <div class="full-name">Лохина Aro швидкозаморожена</div>
+        </article>
+
+        <article class="food-card" data-text="Заморожена полуниця" data-kcal="31" data-protein="0.8" data-fat="0.1"
+          data-carb="5.5">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Пл</div>
+            <div>
+              <div class="name">Заморожена полуниця</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">31 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">0.8 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">0.1 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">5.5 г</div>
+            </div>
+          </div>
+          <div class="full-name">Полуниця Metro Chef швидкозаморожена</div>
+        </article>
+
+        <article class="food-card" data-text="Кава Ірландський крем" data-kcal="408.6" data-protein="16" data-fat="9"
+          data-carb="65.9">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">КІ</div>
+            <div>
+              <div class="name">Кава Ірландський крем</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">408.6 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">16 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">9 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">65.9 г</div>
+            </div>
+          </div>
+          <div class="full-name">Кава зі Львова, Ірландський крем, натуральна смажена мелена з ароматом</div>
+        </article>
+
+        <article class="food-card" data-text="Яловичий фарш" data-kcal="162" data-protein="17" data-fat="10"
+          data-carb="0">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Яф</div>
+            <div>
+              <div class="name">Яловичий фарш</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">162 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">17 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">10 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">0 г</div>
+            </div>
+          </div>
+          <div class="full-name">Фарш яловичий Salsus охолоджений</div>
+        </article>
+
+        <article class="food-card" data-text="Курячий фарш" data-kcal="100" data-protein="19.2" data-fat="2.6"
+          data-carb="0">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Кф</div>
+            <div>
+              <div class="name">Курячий фарш</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">100 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">19.2 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">2.6 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">0 г</div>
+            </div>
+          </div>
+          <div class="full-name">Фарш курячий з філе охолоджений ваговий (Сільпо)</div>
+        </article>
+
+        <article class="food-card" data-text="Філе курчат бройлерів" data-kcal="119" data-protein="19.51" data-fat="4.5"
+          data-carb="0">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Фк</div>
+            <div>
+              <div class="name">Філе курчат бройлерів</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">119 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">19.51 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">4.5 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">0 г</div>
+            </div>
+          </div>
+          <div class="full-name">Філе курчат-бройлерів Епікур охолоджене</div>
+        </article>
+
+        <article class="food-card" data-text="Тунець в розсолі" data-kcal="108" data-protein="24.6" data-fat="0.5"
+          data-carb="0.5">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Тр</div>
+            <div>
+              <div class="name">Тунець в розсолі</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">108 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">24.6 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">0.5 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">0.5 г</div>
+            </div>
+          </div>
+          <div class="full-name">Тунець смугастий Metro Chef шматочками в розсолі</div>
+        </article>
+
+        <article class="food-card" data-text="Форель" data-kcal="148" data-protein="20" data-fat="7" data-carb="0">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Фо</div>
+            <div>
+              <div class="name">Форель</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">148 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">20 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">7 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">0 г</div>
+            </div>
+          </div>
+          <div class="full-name">Форель, їстівна м’якоть (філе або стейк без шкіри та кісток)</div>
+        </article>
+
+        <article class="food-card" data-text="Лосось" data-kcal="206" data-protein="20" data-fat="13" data-carb="0">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Лс</div>
+            <div>
+              <div class="name">Лосось</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">206 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">20 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">13 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">0 г</div>
+            </div>
+          </div>
+          <div class="full-name">Лосось, їстівна м’якоть (філе або стейк без шкіри та кісток)</div>
+        </article>
+
+        <article class="food-card" data-text="Сьомга" data-kcal="208" data-protein="20" data-fat="13" data-carb="0">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">См</div>
+            <div>
+              <div class="name">Сьомга</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">208 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">20 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">13 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">0 г</div>
+            </div>
+          </div>
+          <div class="full-name">Сьомга, їстівна м’якоть (філе або стейк без шкіри та кісток)</div>
+        </article>
+
+        <article class="food-card" data-text="Масло 82.5%" data-kcal="748" data-protein="0.5" data-fat="82.5"
+          data-carb="0.8">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">М82</div>
+            <div>
+              <div class="name">Масло 82.5%</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">748 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">0.5 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">82.5 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">0.8 г</div>
+            </div>
+          </div>
+          <div class="full-name">Масло Metro Chef Екстра солодковершкове 82.5%</div>
+        </article>
+
+        <article class="food-card" data-text="Олія оливкова" data-kcal="824" data-protein="0" data-fat="91.6"
+          data-carb="0">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Ол</div>
+            <div>
+              <div class="name">Олія оливкова</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">824 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">0 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">91.6 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">0 г</div>
+            </div>
+          </div>
+          <div class="full-name">Олія оливкова Mantova нерафінована спрей</div>
+        </article>
+
+        <article class="food-card" data-text="Олія оливкова (лимонна)" data-kcal="824" data-protein="0" data-fat="91.6"
+          data-carb="0">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Ол</div>
+            <div>
+              <div class="name">Олія оливкова (лимонна)</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">824 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">0 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">91.6 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">0 г</div>
+            </div>
+          </div>
+          <div class="full-name">Олія оливкова Mantova Grand' Aroma аромат лимона спрей</div>
+        </article>
+
+        <article class="food-card" data-text="Олія з винограду" data-kcal="828" data-protein="0" data-fat="92"
+          data-carb="0">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Ов</div>
+            <div>
+              <div class="name">Олія з винограду</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">828 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">0 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">92 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">0 г</div>
+            </div>
+          </div>
+          <div class="full-name">Олія Fratelli Mantova з виноградних кісточок спрей</div>
+        </article>
+
+        <article class="food-card" data-text="Олія з авокадо" data-kcal="824" data-protein="0" data-fat="91.6"
+          data-carb="0">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Ол</div>
+            <div>
+              <div class="name">Олія з авокадо</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">824 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">0 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">91.6 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">0 г</div>
+            </div>
+          </div>
+          <div class="full-name">Олія Mantova з авокадо спрей</div>
+        </article>
+
+        <article class="food-card" data-text="Авокадо" data-kcal="118" data-protein="1.5" data-fat="10.7"
+          data-carb="6.7">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Ав</div>
+            <div>
+              <div class="name">Авокадо</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">118 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">1.5 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">10.7 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">6.7 г</div>
+            </div>
+          </div>
+          <div class="full-name">Авокадо Metro Chef Hass бебі</div>
+        </article>
+
+        <article class="food-card" data-text="Вівсянка" data-kcal="372" data-protein="13.5" data-fat="7"
+          data-carb="58.7">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Вв</div>
+            <div>
+              <div class="name">Вівсянка</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">372 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">13.5 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">7 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">58.7 г</div>
+            </div>
+          </div>
+          <div class="full-name">Пластівці вівсяні Bruggen Haferflocken Kernig</div>
+        </article>
+
+        <article class="food-card" data-text="Рис жасмин" data-kcal="350" data-protein="7" data-fat="0.9"
+          data-carb="78.4">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Рж</div>
+            <div>
+              <div class="name">Рис жасмин</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">350 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">7 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">0.9 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">78.4 г</div>
+            </div>
+          </div>
+          <div class="full-name">Рис жасмин Metro Chef шліфований довгозернистий</div>
+        </article>
+
+        <article class="food-card" data-text="Рис басматі голден" data-kcal="323" data-protein="7" data-fat="0.6"
+          data-carb="77.3">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Рб</div>
+            <div>
+              <div class="name">Рис басматі голден</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">323 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">7 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">0.6 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">77.3 г</div>
+            </div>
+          </div>
+          <div class="full-name">Рис басматі голден Metro Chef шліфований довгозернистий</div>
+        </article>
+
+        <article class="food-card" data-text="Гречка" data-kcal="346" data-protein="12.6" data-fat="2.6" data-carb="68">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Гр</div>
+            <div>
+              <div class="name">Гречка</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">346 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">12.6 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">2.6 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">68 г</div>
+            </div>
+          </div>
+          <div class="full-name">Крупа гречана Metro Chef</div>
+        </article>
+
+        <article class="food-card" data-text="Булгур" data-kcal="341" data-protein="13" data-fat="1.9" data-carb="68">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Бг</div>
+            <div>
+              <div class="name">Булгур</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">341 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">13 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">1.9 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">68 г</div>
+            </div>
+          </div>
+          <div class="full-name">Булгур Metro Chef</div>
+        </article>
+
+        <article class="food-card" data-text="Кіноа біла" data-kcal="368" data-protein="14.1" data-fat="6.1"
+          data-carb="64.2">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Кб</div>
+            <div>
+              <div class="name">Кіноа біла</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">368 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">14.1 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">6.1 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">64.2 г</div>
+            </div>
+          </div>
+          <div class="full-name">Кіноа Metro Chef біла</div>
+        </article>
+
+        <article class="food-card" data-text="Локшина Udon" data-kcal="301" data-protein="9.4" data-fat="1.3"
+          data-carb="62.8">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Уд</div>
+            <div>
+              <div class="name">Локшина Udon</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">301 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">9.4 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">1.3 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">62.8 г</div>
+            </div>
+          </div>
+          <div class="full-name">Локшина Js Udon</div>
+        </article>
+
+        <article class="food-card" data-text="Локшина Soba" data-kcal="314" data-protein="9.3" data-fat="1"
+          data-carb="67.2">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Сб</div>
+            <div>
+              <div class="name">Локшина Soba</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">314 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">9.3 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">1 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">67.2 г</div>
+            </div>
+          </div>
+          <div class="full-name">Локшина Js Soba</div>
+        </article>
+
+        <article class="food-card" data-text="Локшина Ramen" data-kcal="301" data-protein="9.4" data-fat="1.3"
+          data-carb="62.8">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Рм</div>
+            <div>
+              <div class="name">Локшина Ramen</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">301 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">9.4 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">1.3 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">62.8 г</div>
+            </div>
+          </div>
+          <div class="full-name">Локшина Js Ramen</div>
+        </article>
+
+        <article class="food-card" data-text="Чорний шоколад 70%" data-kcal="538" data-protein="8.9" data-fat="39"
+          data-carb="31">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Шч</div>
+            <div>
+              <div class="name">Чорний шоколад 70%</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">538 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">8.9 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">39 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">31 г</div>
+            </div>
+          </div>
+          <div class="full-name">Шоколад Rioba чорний 70%</div>
+        </article>
+
+        <article class="food-card" data-text="Чорний шоколад 90%" data-kcal="613" data-protein="9.7" data-fat="54"
+          data-carb="12">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Шч</div>
+            <div>
+              <div class="name">Чорний шоколад 90%</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">613 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">9.7 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">54 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">12 г</div>
+            </div>
+          </div>
+          <div class="full-name">Шоколад Rioba чорний 90%</div>
+        </article>
+
+        <article class="food-card" data-text="Батат" data-kcal="86" data-protein="1.6" data-fat="0.1" data-carb="20.1">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Бт</div>
+            <div>
+              <div class="name">Батат</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">86 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">1.6 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">0.1 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">20.1 г</div>
+            </div>
+          </div>
+          <div class="full-name">Батат особливий, ваговий (Metro)</div>
+        </article>
+
+        <article class="food-card" data-text="Банан" data-kcal="99.5" data-protein="1.5" data-fat="0.1"
+          data-carb="21.7">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Бн</div>
+            <div>
+              <div class="name">Банан</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">99.5 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">1.5 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">0.1 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">21.7 г</div>
+            </div>
+          </div>
+          <div class="full-name">Середньостатистичне значення м’якоті банану</div>
+        </article>
+
+        <article class="food-card" data-text="Картопля" data-kcal="77" data-protein="2" data-fat="0.1" data-carb="17">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Кт</div>
+            <div>
+              <div class="name">Картопля</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">77 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">2 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">0.1 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">17 г</div>
+            </div>
+          </div>
+          <div class="full-name">Біла, жовта, червона, рожева, фіолетова, солодка (батат не включати, бо він
+            калорійніший)</div>
+        </article>
+
+        <article class="food-card" data-text="Огірок" data-kcal="16" data-protein="0.7" data-fat="0.1" data-carb="3.6">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Ог</div>
+            <div>
+              <div class="name">Огірок</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">16 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">0.7 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">0.1 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">3.6 г</div>
+            </div>
+          </div>
+          <div class="full-name">Середньостатистичне значення свіжого огірка</div>
+        </article>
+
+        <article class="food-card" data-text="Свіжий імбир" data-kcal="80" data-protein="1.8" data-fat="0.8"
+          data-carb="18">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Ім</div>
+            <div>
+              <div class="name">Свіжий імбир</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">80 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">1.8 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">0.8 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">18 г</div>
+            </div>
+          </div>
+          <div class="full-name">Середньостатистичне значення свіжого імбиру</div>
+        </article>
+
+        <article class="food-card" data-text="Цибуля" data-kcal="42" data-protein="1.1" data-fat="0.1" data-carb="9.3">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Цб</div>
+            <div>
+              <div class="name">Цибуля</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">42 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">1.1 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">0.1 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">9.3 г</div>
+            </div>
+          </div>
+          <div class="full-name">Біла ріпчаста, жовта ріпчаста, синя, фіолетова (червона)</div>
+        </article>
+
+        <article class="food-card" data-text="Цибуля шалот" data-kcal="72" data-protein="2.5" data-fat="0.1"
+          data-carb="16">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Шц</div>
+            <div>
+              <div class="name">Цибуля шалот</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">72 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">2.5 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">0.1 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">16 г</div>
+            </div>
+          </div>
+          <div class="full-name">Цибуля шалот</div>
+        </article>
+
+        <article class="food-card" data-text="Морква" data-kcal="41" data-protein="0.9" data-fat="0.2" data-carb="9.6">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Мр</div>
+            <div>
+              <div class="name">Морква</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">41 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">0.9 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">0.2 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">9.6 г</div>
+            </div>
+          </div>
+          <div class="full-name">Середньостатистичне значення свіжої моркви</div>
+        </article>
+
+        <article class="food-card" data-text="Болгарський перець" data-kcal="31" data-protein="1" data-fat="0.3"
+          data-carb="6">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Бп</div>
+            <div>
+              <div class="name">Болгарський перець</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">31 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">1 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">0.3 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">6 г</div>
+            </div>
+          </div>
+          <div class="full-name">Середньостатистичне значення свіжого болгарського перцю</div>
+        </article>
+
+        <article class="food-card" data-text="Перець чилі" data-kcal="40" data-protein="2" data-fat="0.4" data-carb="9">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Пч</div>
+            <div>
+              <div class="name">Перець чилі</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">40 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">2 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">0.4 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">9 г</div>
+            </div>
+          </div>
+          <div class="full-name">Середньостатистичне значення свіжого перцю чилі</div>
+        </article>
+
+        <article class="food-card" data-text="Заморожений Шпинат" data-kcal="22" data-protein="2.8" data-fat="0.4"
+          data-carb="0.6">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Шп</div>
+            <div>
+              <div class="name">Заморожений Шпинат</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">22 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">2.8 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">0.4 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">0.6 г</div>
+            </div>
+          </div>
+          <div class="full-name">Шпинат Metro Chef листовий швидкозаморождений</div>
+        </article>
+
+        <article class="food-card" data-text="Оцет бальзамічний" data-kcal="82" data-protein="1" data-fat="0"
+          data-carb="15">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Об</div>
+            <div>
+              <div class="name">Оцет бальзамічний</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">82 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">1 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">0 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">15 г</div>
+            </div>
+          </div>
+          <div class="full-name">Оцет бальзамічний Metro Chef з Модени 6%</div>
+        </article>
+
+        <article class="food-card" data-text="Соус теріякі" data-kcal="171" data-protein="1.8" data-fat="0"
+          data-carb="41.3">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Ст</div>
+            <div>
+              <div class="name">Соус теріякі</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">171 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">1.8 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">0 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">41.3 г</div>
+            </div>
+          </div>
+          <div class="full-name">Соус Metro Chef теріякі</div>
+        </article>
+
+        <article class="food-card" data-text="Карі" data-kcal="373" data-protein="20" data-fat="21" data-carb="9.4">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Кар</div>
+            <div>
+              <div class="name">Карі</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">373 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">20 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">21 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">9.4 г</div>
+            </div>
+          </div>
+          <div class="full-name">Приправа Metro Chef Карі</div>
+        </article>
+
+        <article class="food-card" data-text="Паприка гостра" data-kcal="336" data-protein="15" data-fat="13"
+          data-carb="21">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Пг</div>
+            <div>
+              <div class="name">Паприка гостра</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">336 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">15 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">13 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">21 г</div>
+            </div>
+          </div>
+          <div class="full-name">Паприка Metro Chef гостра мелена сушена</div>
+        </article>
+
+        <article class="food-card" data-text="Паприка солодка" data-kcal="288" data-protein="14" data-fat="12"
+          data-carb="20">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Пс</div>
+            <div>
+              <div class="name">Паприка солодка</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">288 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">14 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">12 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">20 г</div>
+            </div>
+          </div>
+          <div class="full-name">Паприка Metro Chef солодка мелена сушена</div>
+        </article>
+
+        <article class="food-card" data-text="Паприка копчена" data-kcal="334" data-protein="15" data-fat="13"
+          data-carb="21">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Пк</div>
+            <div>
+              <div class="name">Паприка копчена</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">334 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">15 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">13 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">21 г</div>
+            </div>
+          </div>
+          <div class="full-name">Паприка Metro Chef копчена</div>
+        </article>
+
+        <article class="food-card" data-text="Сіль з прянощами для курки" data-kcal="138" data-protein="5.2"
+          data-fat="3.5" data-carb="17">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Спк</div>
+            <div>
+              <div class="name">Сіль з прянощами для курки</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">138 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">5.2 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">3.5 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">17 г</div>
+            </div>
+          </div>
+          <div class="full-name">сіль Metro Chef з прянощами для курки</div>
+        </article>
+
+        <article class="food-card" data-text="Прянощі Италиан смес" data-kcal="304" data-protein="13" data-fat="3.9"
+          data-carb="45">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Пи</div>
+            <div>
+              <div class="name">Прянощі Италиан смес</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">304 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">13 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">3.9 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">45 г</div>
+            </div>
+          </div>
+          <div class="full-name">Суміш прянощів Metro Chef Італійські трави</div>
+        </article>
+
+        <article class="food-card" data-text="Кориця" data-kcal="202" data-protein="3" data-fat="0.5" data-carb="17">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Кр</div>
+            <div>
+              <div class="name">Кориця</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">202 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">3 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">0.5 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">17 г</div>
+            </div>
+          </div>
+          <div class="full-name">Кориця Metro Chef мелена сушена</div>
+        </article>
+
+        <article class="food-card" data-text="Сир 0%" data-kcal="72" data-protein="16.2" data-fat="0" data-carb="1.8">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">См</div>
+            <div>
+              <div class="name">Сир 0%</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">72 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">16.2 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">0 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">1.8 г</div>
+            </div>
+          </div>
+          <div class="full-name">Сир кисломолочний Metro Chef нежирний</div>
+        </article>
+
+        <article class="food-card" data-text="Йогурт 3%" data-kcal="64" data-protein="3.8" data-fat="3" data-carb="5.5">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Йм</div>
+            <div>
+              <div class="name">Йогурт 3%</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">64 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">3.8 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">3 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">5.5 г</div>
+            </div>
+          </div>
+          <div class="full-name">Йогурт Metro Chef натуральний 3%</div>
+        </article>
+
+        <article class="food-card" data-text="Йогурт Галичина 3%" data-kcal="58" data-protein="4.1" data-fat="3"
+          data-carb="3.7">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Йг</div>
+            <div>
+              <div class="name">Йогурт Галичина 3%</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">58 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">4.1 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">3 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">3.7 г</div>
+            </div>
+          </div>
+          <div class="full-name">Йогурт Галичина Карпатський 3%</div>
+        </article>
+
+        <article class="food-card" data-text="Сир біло 0%" data-kcal="72" data-protein="16.2" data-fat="0"
+          data-carb="1.8">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Сб</div>
+            <div>
+              <div class="name">Сир біло 0%</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">72 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">16.2 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">0 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">1.8 г</div>
+            </div>
+          </div>
+          <div class="full-name">Сир кисломолочний Біло нежирний</div>
+        </article>
+
+        <article class="food-card" data-text="Пармезан" data-kcal="402" data-protein="32" data-fat="30" data-carb="0">
+          <div class="copy-btn" title="Скопіювати блок">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 21H6a2 2 0 0 1-2-2V7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <rect x="8" y="3" width="13" height="13" rx="2" stroke="currentColor" stroke-width="1.6"
+                stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="tooltip">Скопійовано</span>
+          </div>
+          <div class="food-title" style="padding-right:50px">
+            <div class="badge">Пр</div>
+            <div>
+              <div class="name">Пармезан</div>
+              <div class="meta">100 г</div>
+            </div>
+          </div>
+          <div class="kbjv">
+            <div class="row">
+              <div class="key">Калорії</div>
+              <div class="val">402 ккал</div>
+            </div>
+            <div class="row">
+              <div class="key">Білки</div>
+              <div class="val">32 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Жири</div>
+              <div class="val">30 г</div>
+            </div>
+            <div class="row">
+              <div class="key">Вуглеводи</div>
+              <div class="val">0 г</div>
+            </div>
+          </div>
+          <div class="full-name">Сир Metro Chef Parmigiano reggiano твердий тертий</div>
+        </article>
+
+        <!-- Тут можна додати інші продукти по аналогії -->
+      </div>
+    </main>
+  </div>
+
+  <script>
+    document.addEventListener('click', (e) => {
+      const btn = e.target.closest('.copy-btn');
+      if (!btn) return;
+
+      const card = btn.closest('.food-card');
+      const name = card.getAttribute('data-text');
+      const kcal100 = parseFloat(card.getAttribute('data-kcal'));
+      const protein100 = parseFloat(card.getAttribute('data-protein'));
+      const fat100 = parseFloat(card.getAttribute('data-fat'));
+      const carb100 = parseFloat(card.getAttribute('data-carb'));
+
+      const weight = parseFloat(prompt(`Введіть вагу продукту у грамах для "${name}"`, "100"));
+      if (isNaN(weight) || weight <= 0) return;
+
+      const kcal = (kcal100 * weight / 100).toFixed(0);
+      const protein = (protein100 * weight / 100).toFixed(1);
+      const fat = (fat100 * weight / 100).toFixed(1);
+      const carb = (carb100 * weight / 100).toFixed(1);
+
+      const text = `${name}, для ${weight} грам - ${kcal} ккал / ${protein} білка / ${fat} жирів / ${carb} вуглеводів`;
+
+      navigator.clipboard.writeText(text).then(() => {
+        btn.classList.add('copied');
+        const tip = btn.querySelector('.tooltip');
+        if (tip) { tip.textContent = 'Скопійовано'; }
+        setTimeout(() => btn.classList.remove('copied'), 1200);
+      }).catch(() => {
+        const tip = btn.querySelector('.tooltip');
+        if (tip) { tip.textContent = 'Помилка'; btn.classList.add('copied'); setTimeout(() => btn.classList.remove('copied'), 1400); }
+      })
+    });
+  </script>
+</body>
+
+</html>
