@@ -149,150 +149,530 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
 
-  /* ================= COPY PRODUCT ================= */
+  /* ================================================= */
+  /*              PRODUCT ACTION MODAL                 */
+  /* ================================================= */
+
+  const productModal =
+    document.getElementById("product-modal");
+
+  const productModalName =
+    document.getElementById("product-modal-name");
+
+  const productWeight =
+    document.getElementById("product-weight");
+
+  const productCancel =
+    document.getElementById("product-cancel");
+
+  const productCopy =
+    document.getElementById("product-copy");
+
+  const productCalculator =
+    document.getElementById("product-calculator");
+
+
+  let selectedProduct = null;
+
+
+  /* ================================================= */
+  /*              CALCULATE PRODUCT                    */
+  /* ================================================= */
+
+  function calculateProduct(card, weight) {
+
+    const name =
+      card.getAttribute("data-text");
+
+
+    const kcal100 =
+      parseFloat(
+        card.getAttribute("data-kcal")
+      );
+
+
+    const protein100 =
+      parseFloat(
+        card.getAttribute("data-protein")
+      );
+
+
+    const fat100 =
+      parseFloat(
+        card.getAttribute("data-fat")
+      );
+
+
+    const carb100 =
+      parseFloat(
+        card.getAttribute("data-carb")
+      );
+
+
+    const kcal =
+      (kcal100 * weight / 100)
+        .toFixed(0);
+
+
+    const protein =
+      (protein100 * weight / 100)
+        .toFixed(1);
+
+
+    const fat =
+      (fat100 * weight / 100)
+        .toFixed(1);
+
+
+    const carb =
+      (carb100 * weight / 100)
+        .toFixed(1);
+
+
+    return {
+
+      name,
+
+      weight,
+
+      kcal,
+
+      protein,
+
+      fat,
+
+      carb,
+
+      text:
+        `${name}, для ${weight} грам - ` +
+        `${kcal} ккал / ` +
+        `${protein} білка / ` +
+        `${fat} жирів / ` +
+        `${carb} вуглеводів`
+
+    };
+
+  }
+
+
+  /* ================================================= */
+  /*              OPEN PRODUCT MODAL                   */
+  /* ================================================= */
 
   document.addEventListener(
     "click",
-    async (e) => {
-
-      const btn =
-        e.target.closest(".copy-btn");
-
-
-      if (!btn) return;
-
+    (e) => {
 
       const card =
-        btn.closest(".food-card");
+        e.target.closest(".food-card");
+
+
+      if (!card) {
+        return;
+      }
+
+
+      selectedProduct = card;
 
 
       const name =
         card.getAttribute("data-text");
 
 
-      const kcal100 =
-        parseFloat(
-          card.getAttribute("data-kcal")
+      productModalName.textContent =
+        name;
+
+
+      productWeight.value = "100";
+
+
+      productModal.classList.add(
+        "active"
+      );
+
+
+      setTimeout(() => {
+
+        productWeight.focus();
+
+        productWeight.select();
+
+      }, 50);
+
+    }
+  );
+
+  /* ================================================= */
+  /*                  CANCEL                           */
+  /* ================================================= */
+
+  productCancel.addEventListener(
+    "click",
+    () => {
+
+      selectedProduct = null;
+
+      productModal.classList.remove(
+        "active"
+      );
+
+      const originalText =
+        productCancel.textContent;
+
+      productCancel.textContent =
+        "Скасовано ✕";
+
+      productCancel.classList.remove(
+        "success"
+      );
+
+      productCancel.classList.add(
+        "error"
+      );
+
+      setTimeout(() => {
+
+        productCancel.textContent =
+          originalText;
+
+        productCancel.classList.remove(
+          "error"
         );
 
+      }, 1200);
 
-      const protein100 =
-        parseFloat(
-          card.getAttribute("data-protein")
-        );
-
-
-      const fat100 =
-        parseFloat(
-          card.getAttribute("data-fat")
-        );
+    }
+  );
 
 
-      const carb100 =
-        parseFloat(
-          card.getAttribute("data-carb")
-        );
+  /* ================================================= */
+  /*              CLOSE BY BACKDROP                    */
+  /* ================================================= */
 
-
-      const weight =
-        parseFloat(
-          prompt(
-            `Введіть вагу продукту у грамах для "${name}"`,
-            "100"
-          )
-        );
-
+  productModal.addEventListener(
+    "click",
+    (e) => {
 
       if (
-        isNaN(weight) ||
-        weight <= 0
+        e.target === productModal
       ) {
-        return;
+
+        selectedProduct = null;
+
+        productModal.classList.remove(
+          "active"
+        );
+
       }
 
-
-      const kcal =
-        (kcal100 * weight / 100)
-          .toFixed(0);
+    }
+  );
 
 
-      const protein =
-        (protein100 * weight / 100)
-          .toFixed(1);
+  /* ================================================= */
+  /*                  ESCAPE                            */
+  /* ================================================= */
+
+  document.addEventListener(
+    "keydown",
+    (e) => {
+
+      if (
+        e.key === "Escape" &&
+        productModal.classList.contains(
+          "active"
+        )
+      ) {
+
+        selectedProduct = null;
+
+        productModal.classList.remove(
+          "active"
+        );
+
+      }
+
+    }
+  );
 
 
-      const fat =
-        (fat100 * weight / 100)
-          .toFixed(1);
+  /* ================================================= */
+  /*              GET PRODUCT DATA                     */
+  /* ================================================= */
+
+  function getSelectedProductData() {
+
+    if (!selectedProduct) {
+      return null;
+    }
 
 
-      const carb =
-        (carb100 * weight / 100)
-          .toFixed(1);
+    const weight =
+      parseFloat(
+        productWeight.value
+      );
 
 
-      const text =
-        `${name}, для ${weight} грам - ` +
-        `${kcal} ккал / ` +
-        `${protein} білка / ` +
-        `${fat} жирів / ` +
-        `${carb} вуглеводів`;
+    if (
+      isNaN(weight) ||
+      weight <= 0
+    ) {
+
+      return null;
+
+    }
+
+
+    return calculateProduct(
+      selectedProduct,
+      weight
+    );
+
+  }
+
+
+  /* ================================================= */
+  /*              COPY PRODUCT                         */
+  /* ================================================= */
+
+  productCopy.addEventListener(
+    "click",
+    async () => {
+
+      const data =
+        getSelectedProductData();
+
+
+      if (!data) {
+
+        productWeight.focus();
+
+        return;
+
+      }
 
 
       try {
 
         await navigator.clipboard.writeText(
-          text
+          data.text
         );
 
 
-        btn.classList.add("copied");
+        const originalText =
+          productCopy.textContent;
 
 
-        const tooltip =
-          btn.querySelector(".tooltip");
+        productCopy.textContent =
+          "Скопійовано ✓";
 
 
-        if (tooltip) {
-
-          tooltip.textContent =
-            "Скопійовано";
-
-        }
+        productCopy.classList.add(
+          "success"
+        );
 
 
         setTimeout(() => {
 
-          btn.classList.remove(
-            "copied"
+          productCopy.textContent =
+            originalText;
+
+          productCopy.classList.remove(
+            "success"
           );
 
         }, 1200);
 
-      } catch {
+      } catch (error) {
 
-        const tooltip =
-          btn.querySelector(".tooltip");
-
-
-        if (tooltip) {
-
-          tooltip.textContent =
-            "Помилка";
-
-        }
+        console.error(
+          "Copy error:",
+          error
+        );
 
 
-        btn.classList.add("copied");
+        const originalText =
+          productCopy.textContent;
+
+
+        productCopy.textContent =
+          "Помилка ✕";
+
+
+        productCopy.classList.add(
+          "error"
+        );
 
 
         setTimeout(() => {
 
-          btn.classList.remove(
-            "copied"
+          productCopy.textContent =
+            originalText;
+
+          productCopy.classList.remove(
+            "error"
           );
 
-        }, 1400);
+        }, 1200);
+
+      }
+
+    }
+  );
+
+
+  /* ================================================= */
+  /*              SEND TO CALCULATOR                   */
+  /* ================================================= */
+
+  productCalculator.addEventListener(
+    "click",
+    () => {
+
+      const data =
+        getSelectedProductData();
+
+
+      if (!data) {
+
+        productWeight.focus();
+
+        return;
+
+      }
+
+
+      /*
+       * Беремо поточний текст
+       * калькулятора.
+       */
+
+      const currentText =
+        calcInput.value;
+
+
+      /*
+       * Якщо textarea порожня —
+       * просто вставляємо продукт.
+       */
+
+      if (
+        currentText.trim() === ""
+      ) {
+
+        calcInput.value =
+          data.text;
+
+      } else {
+
+        /*
+         * Прибираємо зайві порожні
+         * рядки в кінці.
+         */
+
+        const cleanText =
+          currentText.replace(
+            /\s+$/,
+            ""
+          );
+
+
+        calcInput.value =
+          cleanText +
+          "\n" +
+          data.text;
+
+      }
+
+
+      /*
+       * Зберігаємо textarea.
+       */
+
+      localStorage.setItem(
+        CALC_INPUT_KEY,
+        calcInput.value
+      );
+
+
+      /*
+       * Зелений статус кнопки.
+       */
+
+      const originalText =
+        productCalculator.textContent;
+
+
+      productCalculator.textContent =
+        "Додано ✓";
+
+
+      productCalculator.classList.remove(
+        "error"
+      );
+
+
+      productCalculator.classList.add(
+        "success"
+      );
+
+
+      /*
+       * Закриваємо модальне вікно.
+       */
+
+      selectedProduct = null;
+
+      productModal.classList.remove(
+        "active"
+      );
+
+
+      /*
+       * Після короткої паузи
+       * повертаємо кнопку назад.
+       */
+
+      setTimeout(() => {
+
+        productCalculator.textContent =
+          originalText;
+
+
+        productCalculator.classList.remove(
+          "success"
+        );
+
+      }, 1200);
+
+
+      /*
+       * НЕ переходимо на вкладку
+       * калькулятора.
+       *
+       * Користувач залишається
+       * на поточній вкладці.
+       */
+
+    }
+  );
+
+
+  /* ================================================= */
+  /*          ENTER = SEND TO CALCULATOR               */
+  /* ================================================= */
+
+  productWeight.addEventListener(
+    "keydown",
+    (e) => {
+
+      if (
+        e.key === "Enter"
+      ) {
+
+        e.preventDefault();
+
+        productCalculator.click();
 
       }
 
@@ -1134,52 +1514,53 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
       archive =
-        parsed.map(item => {
+        parsed
+          .map(item => {
 
-          if (
-            typeof item === "object" &&
-            item !== null &&
-            item.text
-          ) {
+            if (
+              typeof item === "object" &&
+              item !== null &&
+              item.text
+            ) {
 
-            return {
+              return {
 
-              date:
-                item.date ||
-                extractDateFromSummary(
+                date:
+                  item.date ||
+                  extractDateFromSummary(
+                    item.text
+                  ),
+
+                text:
                   item.text
-                ),
 
-              text:
-                item.text
+              };
 
-            };
-
-          }
+            }
 
 
-          if (
-            typeof item === "string"
-          ) {
+            if (
+              typeof item === "string"
+            ) {
 
-            return {
+              return {
 
-              date:
-                extractDateFromSummary(
+                date:
+                  extractDateFromSummary(
+                    item
+                  ),
+
+                text:
                   item
-                ),
 
-              text:
-                item
+              };
 
-            };
-
-          }
+            }
 
 
-          return null;
+            return null;
 
-        })
+          })
           .filter(Boolean);
 
 
@@ -1428,21 +1809,10 @@ document.addEventListener("DOMContentLoaded", () => {
       dateInput.value;
 
 
-    /*
-     * Важливо:
-     * якщо користувач нічого не вибрав,
-     * вважаємо, що дата залишилась старою.
-     */
-
     const finalDate =
       selectedDate ||
       originalDate;
 
-
-    /*
-     * Порівнюємо саме з датою,
-     * яка була ДО відкриття календаря.
-     */
 
     const dateChanged =
       finalDate !== originalDate;
@@ -1468,16 +1838,6 @@ document.addEventListener("DOMContentLoaded", () => {
       );
 
     } else {
-
-      /*
-       * Тут якраз виправлена проблема
-       * телефону:
-       *
-       * навіть якщо input type=date
-       * НЕ викликав change,
-       * ми все одно явно порівнюємо
-       * дату після завершення редагування.
-       */
 
       showDateError(
         editBtn
@@ -1572,10 +1932,6 @@ document.addEventListener("DOMContentLoaded", () => {
           "edit-date";
 
 
-        /*
-         * Стан поточного редагування.
-         */
-
         let dateInput = null;
 
         let originalDate = null;
@@ -1584,16 +1940,6 @@ document.addEventListener("DOMContentLoaded", () => {
         editBtn.addEventListener(
           "click",
           () => {
-
-            /*
-             * Якщо календар вже відкритий,
-             * друге натискання завершує
-             * редагування.
-             *
-             * Це особливо важливо для телефонів,
-             * де Safari/Chrome не завжди дають
-             * change/blur при виборі тієї самої дати.
-             */
 
             if (
               dateInput &&
@@ -1610,6 +1956,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 originalDate
               );
 
+
+              dateInput = null;
 
               return;
 
@@ -1641,36 +1989,15 @@ document.addEventListener("DOMContentLoaded", () => {
               originalDate;
 
 
-            /*
-             * Зберігаємо посилання,
-             * щоб finishDateEdit()
-             * працював однаково всюди.
-             */
-
             actions.insertBefore(
               dateInput,
               editBtn
             );
 
 
-            /*
-             * Тепер кнопка фактично
-             * стає кнопкою завершення.
-             */
-
             editBtn.textContent =
               "Підтвердити дату";
 
-
-            /*
-             * Якщо дата реально змінилась,
-             * change спрацює і ми одразу
-             * можемо завершити.
-             *
-             * Але перед цим не видаляємо input,
-             * щоб користувач міг нормально
-             * працювати з календарем.
-             */
 
             dateInput.addEventListener(
               "change",
@@ -1702,10 +2029,6 @@ document.addEventListener("DOMContentLoaded", () => {
                   saveArchive();
 
 
-                  /*
-                   * Видаляємо календар.
-                   */
-
                   dateInput.remove();
 
                   dateInput = null;
@@ -1723,6 +2046,10 @@ document.addEventListener("DOMContentLoaded", () => {
                   editBtn.classList.add(
                     "success"
                   );
+
+
+                  text.textContent =
+                    item.text;
 
 
                   setTimeout(() => {
@@ -1746,42 +2073,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
                   }, 1200);
 
-
-                  /*
-                   * Оновлюємо текст архіву,
-                   * але тільки після зміни.
-                   */
-
-                  text.textContent =
-                    item.text;
-
                 }
 
               }
             );
 
 
-            /*
-             * На ПК blur може спрацювати
-             * при закритті календаря.
-             *
-             * На телефоні покладатися на blur
-             * НЕ будемо — там для тієї самої
-             * дати використовується кнопка
-             * "Підтвердити дату".
-             */
-
             dateInput.addEventListener(
               "blur",
               () => {
 
                 setTimeout(() => {
-
-                  /*
-                   * Якщо дата вже змінилась
-                   * через change — input вже
-                   * видалений, нічого не робимо.
-                   */
 
                   if (
                     !dateInput ||
@@ -1794,12 +2096,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
                   }
 
-
-                  /*
-                   * Якщо браузер реально віддав
-                   * нову дату через value,
-                   * завершуємо автоматично.
-                   */
 
                   if (
                     dateInput.value &&
@@ -1815,6 +2111,11 @@ document.addEventListener("DOMContentLoaded", () => {
                       originalDate
                     );
 
+                    dateInput = null;
+
+                    text.textContent =
+                      item.text;
+
                   }
 
                 }, 250);
@@ -1822,10 +2123,6 @@ document.addEventListener("DOMContentLoaded", () => {
               }
             );
 
-
-            /*
-             * Відкриваємо календар.
-             */
 
             dateInput.focus();
 
@@ -1835,11 +2132,6 @@ document.addEventListener("DOMContentLoaded", () => {
               dateInput.showPicker();
 
             } catch {
-
-              /*
-               * showPicker не підтримується
-               * деякими браузерами.
-               */
 
             }
 
@@ -1868,11 +2160,6 @@ document.addEventListener("DOMContentLoaded", () => {
         removeBtn.addEventListener(
           "click",
           () => {
-
-            /*
-             * Нормальне системне віконце
-             * підтвердження.
-             */
 
             const confirmed =
               confirm(
