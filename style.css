@@ -1138,3 +1138,207 @@ button.copied {
   }
 
 }
+
+/* ================================================= */
+/*             PRODUCT ACTION MODAL                  */
+/* ================================================= */
+
+.product-modal {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 10000;
+
+  display: none;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(0, 0, 0, 0.68);
+
+  backdrop-filter: blur(3px);
+}
+
+
+.product-modal.active {
+  display: flex;
+}
+
+
+.product-modal-box {
+  width: 100%;
+
+  max-width: 420px;
+
+  background: var(--bg-card);
+
+  border: 1px solid var(--bg-accent);
+
+  border-radius: var(--radius);
+
+  padding: 20px;
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.7);
+}
+
+
+.product-modal-title {
+  margin-bottom: 18px;
+
+  text-align: center;
+
+  font-size: 18px;
+
+  font-weight: 700;
+
+  color: var(--text-main);
+}
+
+
+.product-modal-weight {
+  margin-bottom: 18px;
+}
+
+
+.product-modal-weight label {
+  display: block;
+
+  margin-bottom: 7px;
+
+  font-size: var(--fs-m);
+
+  color: var(--text-secondary);
+}
+
+
+#product-weight {
+  width: 100%;
+
+  height: 40px;
+
+  padding: 8px 10px;
+
+  background: var(--bg-accent);
+
+  border: 1px solid transparent;
+
+  border-radius: var(--radius);
+
+  color: var(--text-main);
+
+  outline: none;
+
+  font-size: var(--fs-m);
+}
+
+
+#product-weight:focus {
+  border-color: var(--primary-color);
+
+  box-shadow:
+    0 0 6px var(--primary-color);
+}
+
+
+.product-modal-actions {
+  display: flex;
+
+  gap: 8px;
+
+  flex-wrap: wrap;
+}
+
+
+.product-modal-actions button {
+  flex: 1;
+
+  min-width: 110px;
+}
+
+
+.product-action-cancel {
+  background: var(--bg-accent) !important;
+
+  color: var(--text-secondary);
+}
+
+
+.product-action-cancel:hover {
+  background: #454952 !important;
+
+  color: var(--text-main);
+}
+
+
+/* ================================================= */
+/*             PRODUCT CARD INTERACTION              */
+/* ================================================= */
+
+.food-card {
+  cursor: pointer;
+}
+
+
+/*
+ * Щоб при натисканні на стару іконку
+ * копіювання не відкривався модальний блок
+ * двічі, залишаємо її клікабельною окремо.
+ */
+
+.copy-btn {
+  z-index: 2;
+}
+
+
+/* ================================================= */
+/*                  MOBILE                            */
+/* ================================================= */
+
+@media (max-width: 480px) {
+
+  .product-modal {
+    padding: 15px;
+  }
+
+
+  .product-modal-box {
+    padding: 16px;
+  }
+
+
+  .product-modal-actions {
+    flex-direction: column;
+  }
+
+
+  .product-modal-actions button {
+    width: 100%;
+
+    min-width: 0;
+  }
+
+}
+
+#product-cancel {
+  background-color: var(--primary-color) !important;
+  color: #ffffff !important;
+  border: none !important;
+}
+
+#product-cancel:hover {
+  background-color: var(--hover-color) !important;
+}
+
+#product-cancel.error {
+  background-color: #ed4245 !important;
+  color: #ffffff !important;
+}
+
+#product-cancel.success {
+  background-color: #43b581 !important;
+  color: #ffffff !important;
+}
